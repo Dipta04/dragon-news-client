@@ -42,8 +42,8 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-
-                        <Nav.Link href="#deets">
+                    {/* navlink ta akta warning khaccilo tai sorai disa na soraila o chole */}
+                        <>
                             {
                                 user?.uid
                                 ?
@@ -58,15 +58,15 @@ const Header = () => {
                                 </>
                             }
                             
-                        </Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                        </>
+                        <Link to="/profile">
                             {user?.photoURL
                             ?
                             <Image style={{height:'30px'}} roundedCircle src={user?.photoURL}></Image>
                             :
                             <FaUser></FaUser>
                         }
-                        </Nav.Link>
+                        </Link>
 
                     </Nav>
                     <div className='d-lg-none'>
